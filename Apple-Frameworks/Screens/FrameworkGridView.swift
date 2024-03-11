@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FrameworkGridView: View {
+    
     let columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
                                GridItem(.flexible())]
@@ -26,28 +27,6 @@ struct FrameworkGridView: View {
         
     }
 }
-
-struct FrameworkTitleView: View {
-    
-    let framework: Framework
-    
-    var body: some View {
-        VStack {
-            Image(framework.imageName)
-                .resizable()
-                .frame(width: 92, height: 92)
-            
-            Text(framework.name)
-                .font(.title2)
-                .fontWeight(.semibold)
-                .scaledToFit()
-                .minimumScaleFactor(0.6)
-        }
-        .padding()
-    }
-}
-
-
 
 #Preview {
     FrameworkGridView()

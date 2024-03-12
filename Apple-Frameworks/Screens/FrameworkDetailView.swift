@@ -9,26 +9,12 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     
-    var framework: Framework
-    @Binding var isShowingDetailView: Bool
-    var isListView: Bool
     @State var isShowingSafariView = false
+    var framework: Framework
+    
     
     var body: some View {
         VStack {
-            
-            if !isListView {
-                HStack{
-                    Spacer()
-                    Button {
-                        isShowingDetailView = false
-                    } label: {
-                        AFDismissButton()
-                    }
-                }
-                
-                Spacer()
-            }
             FrameworkTitleView(framework: framework)
             
             Text(framework.description)
@@ -43,7 +29,13 @@ struct FrameworkDetailView: View {
                 AFButton(title: "Learn More",
                          titleColor: .white,
                          backgroundColor: .red)
+//                Label("Learn More", systemImage: "book.fill")
             })
+//            .buttonStyle(.borderedProminent)
+//            .controlSize(.large)
+//            .tint(.red)
+            
+            
         }
         .fullScreenCover(isPresented: $isShowingSafariView, content: {
             SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
@@ -52,5 +44,5 @@ struct FrameworkDetailView: View {
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework, isShowingDetailView: .constant(true), isListView: true)
+    FrameworkDetailView(framework: MockData.sampleFramework)
 }

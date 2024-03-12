@@ -20,6 +20,7 @@ struct FrameworkTitleView: View {
             Text(framework.name)
                 .font(.title2)
                 .fontWeight(.semibold)
+                .foregroundStyle(Color.primary)
                 .scaledToFit()
                 .minimumScaleFactor(0.6)
         }

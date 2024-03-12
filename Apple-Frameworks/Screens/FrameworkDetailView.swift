@@ -9,26 +9,12 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     
-    var framework: Framework
-    @Binding var isShowingDetailView: Bool
-    var isListView: Bool
     @State var isShowingSafariView = false
+    var framework: Framework
+    
     
     var body: some View {
         VStack {
-            
-            if !isListView {
-                HStack{
-                    Spacer()
-                    Button {
-                        isShowingDetailView = false
-                    } label: {
-                        AFDismissButton()
-                    }
-                }
-                
-                Spacer()
-            }
             FrameworkTitleView(framework: framework)
             
             Text(framework.description)
@@ -58,5 +44,5 @@ struct FrameworkDetailView: View {
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework, isShowingDetailView: .constant(true), isListView: true)
+    FrameworkDetailView(framework: MockData.sampleFramework)
 }

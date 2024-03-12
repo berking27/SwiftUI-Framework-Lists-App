@@ -53,12 +53,28 @@
 		AA164C662B9F9A6B00F307AB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AA164C672B9F9A7A00F307AB /* FrameworkTitleView.swift */,
-				AAF464242BA0EF0500498A8A /* FrameworkTitleListView.swift */,
+				AA6B8A6A2BA0F94A005F716E /* FrameworkTitle */,
+				AA6B8A692BA0F93A005F716E /* Buttons */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA6B8A692BA0F93A005F716E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
 				AA164C692B9F9CE800F307AB /* AFButton.swift */,
 				AAF464262BA0F18800498A8A /* AFDismissButton.swift */,
 			);
-			path = View;
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		AA6B8A6A2BA0F94A005F716E /* FrameworkTitle */ = {
+			isa = PBXGroup;
+			children = (
+				AA164C672B9F9A7A00F307AB /* FrameworkTitleView.swift */,
+				AAF464242BA0EF0500498A8A /* FrameworkTitleListView.swift */,
+			);
+			path = FrameworkTitle;
 			sourceTree = "<group>";
 		};
 		AABD80E22B9F4AEF005AE501 = {

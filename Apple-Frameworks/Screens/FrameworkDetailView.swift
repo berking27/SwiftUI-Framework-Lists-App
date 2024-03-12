@@ -11,27 +11,24 @@ struct FrameworkDetailView: View {
     
     var framework: Framework
     @Binding var isShowingDetailView: Bool
+    var isListView: Bool
     @State var isShowingSafariView = false
     
     var body: some View {
         VStack {
-            HStack{
-                Spacer()
-                
-                Button {
-                    isShowingDetailView = false
-                } label: {
-                    Image(systemName: SFSymbols.closeIcon)
-                        .foregroundStyle(Color(.label))
-                        .imageScale(.large)
-                        .frame(width: 44, height: 44)
-                        .padding()
+            
+            if !isListView {
+                HStack{
+                    Spacer()
+                    Button {
+                        isShowingDetailView = false
+                    } label: {
+                        AFDismissButton()
+                    }
                 }
+                
+                Spacer()
             }
-            
-            
-            Spacer()
-            
             FrameworkTitleView(framework: framework)
             
             Text(framework.description)
@@ -55,5 +52,5 @@ struct FrameworkDetailView: View {
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework, isShowingDetailView: .constant(true))
+    FrameworkDetailView(framework: MockData.sampleFramework, isShowingDetailView: .constant(true), isListView: true)
 }

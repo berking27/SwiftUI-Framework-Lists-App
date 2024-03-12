@@ -16,6 +16,7 @@
 		AABD80F32B9F4AF1005AE501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABD80F22B9F4AF1005AE501 /* Assets.xcassets */; };
 		AABD80F62B9F4AF1005AE501 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABD80F52B9F4AF1005AE501 /* Preview Assets.xcassets */; };
 		AABD80FD2B9F4E46005AE501 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD80FC2B9F4E46005AE501 /* Framework.swift */; };
+		AAF4641B2BA0648200498A8A /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4641A2BA0648200498A8A /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AABD80F22B9F4AF1005AE501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AABD80F52B9F4AF1005AE501 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AABD80FC2B9F4E46005AE501 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
+		AAF4641A2BA0648200498A8A /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			children = (
 				AA164C672B9F9A7A00F307AB /* FrameworkTitleView.swift */,
 				AA164C692B9F9CE800F307AB /* AFButton.swift */,
+				AAF4641A2BA0648200498A8A /* SafariView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				AABD80F12B9F4AEF005AE501 /* FrameworkGridView.swift in Sources */,
 				AABD80FD2B9F4E46005AE501 /* Framework.swift in Sources */,
 				AABD80EF2B9F4AEF005AE501 /* Apple_FrameworksApp.swift in Sources */,
+				AAF4641B2BA0648200498A8A /* SafariView.swift in Sources */,
 				AA164C6A2B9F9CE800F307AB /* AFButton.swift in Sources */,
 				AA8EB97B2BA0412600100270 /* FrameworkGridViewModel.swift in Sources */,
 				AA164C682B9F9A7A00F307AB /* FrameworkTitleView.swift in Sources */,

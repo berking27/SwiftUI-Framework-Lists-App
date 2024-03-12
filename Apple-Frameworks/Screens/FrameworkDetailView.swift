@@ -21,7 +21,7 @@ struct FrameworkDetailView: View {
                 Button {
                     isShowingDetailView = false
                 } label: {
-                    Image(systemName: "xmark")
+                    Image(systemName: SFSymbols.closeIcon)
                         .foregroundStyle(Color(.label))
                         .imageScale(.large)
                         .frame(width: 44, height: 44)

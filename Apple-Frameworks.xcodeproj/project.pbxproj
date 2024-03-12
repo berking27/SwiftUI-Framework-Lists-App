@@ -10,7 +10,6 @@
 		AA164C652B9F9A2D00F307AB /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA164C642B9F9A2D00F307AB /* FrameworkDetailView.swift */; };
 		AA164C682B9F9A7A00F307AB /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA164C672B9F9A7A00F307AB /* FrameworkTitleView.swift */; };
 		AA164C6A2B9F9CE800F307AB /* AFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA164C692B9F9CE800F307AB /* AFButton.swift */; };
-		AA8EB97B2BA0412600100270 /* FrameworkGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8EB97A2BA0412600100270 /* FrameworkGridViewModel.swift */; };
 		AABD80EF2B9F4AEF005AE501 /* Apple_FrameworksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD80EE2B9F4AEF005AE501 /* Apple_FrameworksApp.swift */; };
 		AABD80F12B9F4AEF005AE501 /* FrameworkGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD80F02B9F4AEF005AE501 /* FrameworkGridView.swift */; };
 		AABD80F32B9F4AF1005AE501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABD80F22B9F4AF1005AE501 /* Assets.xcassets */; };
@@ -26,7 +25,6 @@
 		AA164C642B9F9A2D00F307AB /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
 		AA164C672B9F9A7A00F307AB /* FrameworkTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleView.swift; sourceTree = "<group>"; };
 		AA164C692B9F9CE800F307AB /* AFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFButton.swift; sourceTree = "<group>"; };
-		AA8EB97A2BA0412600100270 /* FrameworkGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridViewModel.swift; sourceTree = "<group>"; };
 		AABD80EB2B9F4AEF005AE501 /* Apple-Frameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple-Frameworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABD80EE2B9F4AEF005AE501 /* Apple_FrameworksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_FrameworksApp.swift; sourceTree = "<group>"; };
 		AABD80F02B9F4AEF005AE501 /* FrameworkGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridView.swift; sourceTree = "<group>"; };
@@ -53,12 +51,28 @@
 		AA164C662B9F9A6B00F307AB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AA164C672B9F9A7A00F307AB /* FrameworkTitleView.swift */,
-				AAF464242BA0EF0500498A8A /* FrameworkTitleListView.swift */,
+				AA6B8A6A2BA0F94A005F716E /* FrameworkTitle */,
+				AA6B8A692BA0F93A005F716E /* Buttons */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA6B8A692BA0F93A005F716E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
 				AA164C692B9F9CE800F307AB /* AFButton.swift */,
 				AAF464262BA0F18800498A8A /* AFDismissButton.swift */,
 			);
-			path = View;
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		AA6B8A6A2BA0F94A005F716E /* FrameworkTitle */ = {
+			isa = PBXGroup;
+			children = (
+				AA164C672B9F9A7A00F307AB /* FrameworkTitleView.swift */,
+				AAF464242BA0EF0500498A8A /* FrameworkTitleListView.swift */,
+			);
+			path = FrameworkTitle;
 			sourceTree = "<group>";
 		};
 		AABD80E22B9F4AEF005AE501 = {
@@ -137,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				AABD80F02B9F4AEF005AE501 /* FrameworkGridView.swift */,
-				AA8EB97A2BA0412600100270 /* FrameworkGridViewModel.swift */,
 			);
 			path = FrameworkGridView;
 			sourceTree = "<group>";
@@ -229,7 +242,6 @@
 				AAF464252BA0EF0500498A8A /* FrameworkTitleListView.swift in Sources */,
 				AA164C6A2B9F9CE800F307AB /* AFButton.swift in Sources */,
 				AAF464272BA0F18900498A8A /* AFDismissButton.swift in Sources */,
-				AA8EB97B2BA0412600100270 /* FrameworkGridViewModel.swift in Sources */,
 				AA164C682B9F9A7A00F307AB /* FrameworkTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

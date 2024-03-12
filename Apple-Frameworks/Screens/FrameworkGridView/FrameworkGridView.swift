@@ -9,18 +9,14 @@ import SwiftUI
 
 struct FrameworkGridView: View {
     
-    @StateObject var viewModel = FrameworkGridViewModel()
-    
     @State private var selectedViewMode: Int = 0
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 if selectedViewMode == 2 {
                     List(MockData.frameworks) { framework in
-                        NavigationLink(destination: FrameworkDetailView(framework: framework,
-                                                                        isShowingDetailView: $viewModel.isShowingDetailView,
-                                                                        isListView: true)) {
+                        NavigationLink(destination: FrameworkDetailView(framework: framework)) {
                             FrameworkTitleListView(framework: framework)
                         }
                     }
@@ -28,17 +24,16 @@ struct FrameworkGridView: View {
                     
                 } else {
                     ScrollView {
-                        CustomColumGridView(selectedViewMode: $selectedViewMode, viewModel: viewModel)
+                        CustomColumGridView(selectedViewMode: $selectedViewMode)
                     }
                 }
             }
             .navigationTitle("🍎 Frameworks")
+            .navigationDestination(for: Framework.self, destination: { framework in
+                FrameworkDetailView(framework: framework)
+            })
             .toolbar {
                 RightToolBarView(selectedViewMode: $selectedViewMode)
-            }
-            .sheet(isPresented: $viewModel.isShowingDetailView) {
-                FrameworkDetailView(framework: viewModel.selectedFramework!,
-                                    isShowingDetailView: $viewModel.isShowingDetailView, isListView: false)
             }
         }
         .accentColor(Color.primary)
@@ -108,17 +103,19 @@ struct CustomColumGridView: View {
     }
     
     @Binding var selectedViewMode: Int
-    @ObservedObject var viewModel: FrameworkGridViewModel
+//    @ObservedObject var viewModel: FrameworkGridViewModel
     
     var body: some View {
         LazyVGrid(columns: columns) {
             ForEach(MockData.frameworks) { framework in
-                FrameworkTitleView(framework: framework)
-                    .onTapGesture {
-                        withAnimation {
-                            viewModel.selectedFramework = framework
-                        }
-                    }
+                NavigationLink(value: framework) {
+                    FrameworkTitleView(framework: framework)
+                }
+//                    .onTapGesture {
+//                        withAnimation {
+//                            viewModel.selectedFramework = framework
+//                        }
+//                    }
             }
         }
     }
